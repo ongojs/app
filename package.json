@@ -11,7 +11,6 @@
     "lib": "lib",
     "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "test"
   },
@@ -49,6 +48,8 @@
     "@mongodb-model/schema": "^0.0.0",
     "@mongodb-model/tcp-controller": "^0.0.1000",
     "@mongodb-model/template": "^0.0.100001",
+    "@ongojs/couleurs": "file:src/modules/couleurs",
+    "@ongojs/socket": "file:src/modules/socket",
     "dotenv": "^16.0.3",
     "mongodb": "^4.12.1",
     "vitest": "^0.25.3"
