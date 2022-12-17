@@ -12,5 +12,5 @@
 /data.json 
 /.DS_Store
 /lab 
-src/modules/socket/.git
-src/modules/couleurs/.git
+/src/modules/socket/.git
+/src/modules/couleurs/.git
