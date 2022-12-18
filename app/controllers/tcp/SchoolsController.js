@@ -4,17 +4,17 @@
 /**
  * @author Ericson S. Weah  <ericson.weah@ericsonsweah.com> <https://github.com/ericsonweah>  <+1.385.204.5167>
  *
- * @module ChatsController
+ * @module SchoolsController
  * @kind class
  *
  * @extends Controller
  * @requires Controller
  *
- * @classdesc ChatsController class
+ * @classdesc SchoolsController class
  */
 
 
-class ChatsController extends require("@mongodb-model/controller") {
+class SchoolsController extends require("@ongojs/controller") {
 
   constructor(...arrayOfObjects) {
 
@@ -27,9 +27,9 @@ class ChatsController extends require("@mongodb-model/controller") {
     });
 
     // auto bind methods
-    this.autobind(ChatsController);
+    this.autobind(SchoolsController);
     // auto invoke methods
-    this.autoinvoker(ChatsController);
+    this.autoinvoker(SchoolsController);
     // add other classes method if methods do not already exist. Argument order matters!
     // this.methodizer(..classList);
     //Set the maximum number of listeners to infinity
@@ -145,4 +145,4 @@ class ChatsController extends require("@mongodb-model/controller") {
   async destroy(io, socket, sub, pub, ...args) {}
 }
 
-module.exports = ChatsController;
+module.exports = SchoolsController;

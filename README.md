@@ -9,14 +9,14 @@ full power of the Nodejs mongodb driver and of the NodeJs Transform Stream API. 
 ### Installation
 
 ```bash
-$ yarn add @mongodb-model/model
+$ yarn add @ongojs/app
 
 ```
  or 
 
 ```bash
 
-$ npm i @mongodb-model/model
+$ npm i @ongojs/app
 
 ```
 
@@ -25,7 +25,7 @@ $ npm i @mongodb-model/model
 #### Basic Event base CRUD
 
 ```javascript
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/app');
 const User = new Model({collection: 'users'});
     
 // query (create query)
@@ -42,7 +42,7 @@ User.on('create-error', error => console.log('new user creation error', error));
 
 #### Making api request (http request)
 ```javascript
- const Model = require('@mongodb-model/model');
+ const Model = require('@ongojs/app');
  const model = new Model();
  model.apiGet(); //model.apiGet(your api endpoint)
  model.on('apiGet', data => console.log(data));
@@ -53,7 +53,7 @@ User.on('create-error', error => console.log('new user creation error', error));
 #### By extension
 
 ```javascript
- class MyWonderfulClass extends require('@mongodb-model/model') {
+ class MyWonderfulClass extends require('@ongojs/app') {
 
     constructor(...arrayOfObjects) {
 
@@ -74,7 +74,7 @@ User.on('create-error', error => console.log('new user creation error', error));
 ```
 #### Detailed explanation with first contructor parameter object
 ```javascript
- const Model = require('@mongodb-model/model');
+ const Model = require('@ongojs/app');
                 
 // Usage 
 const YourCustomModel = new Model({db: 'your_database_name', collection: 'your_collection_name', url: 'your_database_url'})
@@ -106,7 +106,7 @@ ForumUser.on('create-error', error => console.log('new user creation error', err
 
 #### Detailed explanation with all other contructor parameter objects
 ```javascript
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/app');
   
 const User = new Model({},{title: 'Cool Users', age: 25, fullName: () => 'User Full Name', Post: class Post {}});
 
@@ -125,7 +125,7 @@ const {title, age, fullName, Post} = User
 
 #### Event base CRUD
 ```javascript
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/app');
 const User = new Model({collection: 'users'});
 
 // Read (reall all)
@@ -159,7 +159,7 @@ User.on('delete-error', error => console.log('error in deleting user', error));
 
 #### Promise base CRUD
 ```javascript
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/app');
 const User = new Model({collection: 'users'});
 
 // Read (reall all) : this way of querying can be done with all "awaitMethods" on the model. 
@@ -210,7 +210,7 @@ model make:model User
 #### Some available instance methods 
 ```javascript
 
-const DB = require('@mongodb-model/model');
+const DB = require('@ongojs/app');
 const db = new DB();
 
 // The following functions are available on db, the DB instance, as methods.
@@ -283,7 +283,7 @@ awaitFirstByToken(token, collectionName = 'users')
 ```javascript
 'use strict';
 
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/model');
 
 /*
 |--------------------------------------------------------------------------------

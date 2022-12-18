@@ -1,17 +1,17 @@
 'use strict';
 /*
 |--------------------------------------------------------------------------------
-| Chat Model
+| User Model
 |--------------------------------------------------------------------------------
 |
-| Chat extends the base model (Model) class and thus has everything
+| User extends the base model (Model) class and thus has everything
 | the base model has including all the basic CRUD methods or operations.
 |
 |
 */
-const Model = require('@mongodb-model/model');
+const Model = require('@ongojs/model');
 
- class Chat extends Model{
+ class User extends Model{
 
     /*
     |----------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ const Model = require('@mongodb-model/model');
     |
     |
     */
-    constructor(dbOptions = {collection: 'chats', url: 'mongodb://localhost:27017', db: 'mvc'},...options){
+    constructor(dbOptions = {collection: 'users', url: 'mongodb://localhost:27017', db: 'mvc'},...options){
    
     /*
     |-------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ const Model = require('@mongodb-model/model');
     |
     */
 
-    if(!this['hasOwnProperty']['collection']) this.collection = 'chats';
+    if(!this['hasOwnProperty']['collection']) this.collection = 'users';
     if(!this['hasOwnProperty']['url']) this.url = 'mongodb://localhost:27017';
 
     /*
@@ -66,7 +66,7 @@ const Model = require('@mongodb-model/model');
 
     /*
     |---------------------------------------------------------------------------------------
-    |                   Bello, you may add properties and methods to your model. 
+    |                   Bellow, you may add properties and methods to your model. 
     |---------------------------------------------------------------------------------------
     |
     */
@@ -97,4 +97,6 @@ const Model = require('@mongodb-model/model');
  |-----------------------------------------------------------------------------------------------
  |
  */
- module.exports = Chat;
+ module.exports = User;
+
+
